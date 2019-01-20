@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <h2>Phones Store</h2>
+    <table>
+        <tr>
+            <td><p>Name</p></td>
+            <td><p>Price</p></td>
+            <td></td>
+            <td><p>Quantity</p></td>
+
+
+
+
+        </tr>
+        @foreach (var el in ViewBag.Phones)
+        {
+            <tr>
+                <td><p>@el.Name</p></td>
+                <td><p>@el.Price</p></td>
+                <td><a href="/Home/Buy/?Id=@el.Id" class="waves-effect waves-light btn">Buy</a></td>
+                <td><p>@el.Qty</p></td>
+
+            </tr>
+           
+               
+           
+        }
+    </table>
+</div>
